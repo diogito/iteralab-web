@@ -4,7 +4,7 @@ import { WHATSAPP_LINK } from '@/lib/constants';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-16" id="inicio">
+    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden" id="inicio">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950" />
 
