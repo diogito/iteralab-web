@@ -5,7 +5,7 @@ import { WHATSAPP_LINK } from '@/lib/constants';
 
 export function PromoBanner() {
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="py-10 sm:py-16 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/30 via-indigo-800/20 to-indigo-900/30" />
 
@@ -21,7 +21,7 @@ export function PromoBanner() {
               <span className="text-sm font-medium">Oferta Especial</span>
             </div>
 
-            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Habilitación Costo{' '}
               <span className="text-indigo-400">$0</span>
             </h2>

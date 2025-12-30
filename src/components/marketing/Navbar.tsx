@@ -64,18 +64,18 @@ export function Navbar() {
       {/* Mobile Navigation */}
       {mobileOpen && (
         <div className="md:hidden glass border-b border-zinc-800/50">
-          <div className="px-4 py-4 space-y-4">
+          <nav className="px-6 py-6 space-y-1">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
+                className="block py-4 text-lg font-medium text-zinc-300 hover:text-white transition-colors border-b border-zinc-800/50 last:border-b-0"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-          </div>
+          </nav>
         </div>
       )}
     </header>
