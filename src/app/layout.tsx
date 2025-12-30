@@ -49,6 +49,24 @@ export default function RootLayout({
     <html lang="es" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <body className="bg-zinc-950 text-zinc-100 antialiased">
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ProfessionalService',
+              name: 'Iteralab',
+              description: 'Consultora de Ingeniería de Software y Modernización Web.',
+              url: 'https://iteralab.cl',
+              address: {
+                '@type': 'PostalAddress',
+                addressCountry: 'CL',
+                addressRegion: 'Santiago',
+              },
+              priceRange: '$$',
+            }),
+          }}
+        />
       </body>
     </html>
   );

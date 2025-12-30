@@ -1,6 +1,22 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { WHATSAPP_LINK } from '@/lib/constants';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+};
+
+const ease = [0.21, 0.47, 0.32, 0.98] as const;
+
+const transition = (delay: number) => ({
+  duration: 0.5,
+  delay,
+  ease: ease as unknown as [number, number, number, number],
+});
 
 export function Hero() {
   return (
@@ -24,26 +40,50 @@ export function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <AnimatedSection>
-            <div className="inline-flex items-center gap-2 bg-indigo-500/10 text-indigo-400 px-4 py-2 rounded-full mb-6">
+          <div>
+            {/* Badge WaaS */}
+            <motion.div
+              {...fadeInUp}
+              animate={fadeInUp.animate}
+              transition={transition(0)}
+              className="inline-flex items-center gap-2 bg-indigo-500/10 text-indigo-400 px-4 py-2 rounded-full mb-6"
+            >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
               </span>
               <span className="text-sm font-medium">WaaS - Web as a Service</span>
-            </div>
+            </motion.div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+            {/* H1 Título */}
+            <motion.h1
+              {...fadeInUp}
+              animate={fadeInUp.animate}
+              transition={transition(0.1)}
+              className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight"
+            >
               Arquitectura Digital
               <span className="text-indigo-400"> que Vende.</span>
-            </h1>
+            </motion.h1>
 
-            <p className="mt-6 text-lg sm:text-xl text-zinc-400 max-w-xl">
+            {/* Subtítulo */}
+            <motion.p
+              {...fadeInUp}
+              animate={fadeInUp.animate}
+              transition={transition(0.2)}
+              className="mt-6 text-lg sm:text-xl text-zinc-400 max-w-xl"
+            >
               Deuda técnica cero. Modernizamos tu infraestructura web con
               estándares de Silicon Valley y soporte local en Chile.
-            </p>
+            </motion.p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            {/* Botones */}
+            <motion.div
+              {...fadeInUp}
+              animate={fadeInUp.animate}
+              transition={transition(0.3)}
+              className="mt-10 flex flex-col sm:flex-row gap-4"
+            >
               <a href="#precios">
                 <Button size="lg">
                   Ver Planes
@@ -54,10 +94,15 @@ export function Hero() {
                   Agendar Llamada
                 </Button>
               </a>
-            </div>
+            </motion.div>
 
             {/* Trust indicators */}
-            <div className="mt-12 flex items-center gap-6 text-sm text-zinc-500">
+            <motion.div
+              {...fadeInUp}
+              animate={fadeInUp.animate}
+              transition={transition(0.4)}
+              className="mt-12 flex items-center gap-6 text-sm text-zinc-500"
+            >
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -76,8 +121,8 @@ export function Hero() {
                 </svg>
                 <span>Soporte Chile</span>
               </div>
-            </div>
-          </AnimatedSection>
+            </motion.div>
+          </div>
 
           {/* Hero Visual - CSS Gradient Art */}
           <AnimatedSection delay={0.2} className="hidden lg:block">
