@@ -79,7 +79,25 @@ export function Navbar() {
 
       {/* Mobile Navigation - Fullscreen Fixed Overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-zinc-950 h-screen w-screen flex flex-col items-center justify-center gap-8 md:hidden">
+        <div
+          className="md:hidden"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            width: '100%',
+            height: '100dvh',
+            backgroundColor: '#09090b',
+            zIndex: 9999,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '2rem',
+          }}
+        >
           {/* Close Button */}
           <button
             className="absolute top-4 right-4 p-2 text-zinc-400 hover:text-zinc-100 transition-colors"
