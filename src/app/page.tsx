@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/marketing/Navbar';
 import { Hero } from '@/components/marketing/Hero';
+import { TechStack } from '@/components/marketing/TechStack';
 import { ComparisonGrid } from '@/components/marketing/ComparisonGrid';
 import { PricingCards } from '@/components/marketing/PricingCards';
 import { PromoBanner } from '@/components/marketing/PromoBanner';
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <TechStack />
         <ComparisonGrid />
         <PricingCards />
         <PromoBanner />

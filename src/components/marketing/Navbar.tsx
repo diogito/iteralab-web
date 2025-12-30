@@ -75,16 +75,6 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <Button size="sm" className="w-full">
-                Contactar
-              </Button>
-            </a>
           </div>
         </div>
       )}

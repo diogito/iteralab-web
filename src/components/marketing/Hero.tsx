@@ -11,6 +11,9 @@ export function Hero() {
       {/* Decorative gradient orb */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent" />
 
+      {/* Spotlight effect behind H1 */}
+      <div className="absolute top-1/3 left-1/4 w-[600px] h-[400px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-500/20 via-zinc-950/0 to-zinc-950/0 blur-3xl pointer-events-none" />
+
       {/* Grid pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.02]"
