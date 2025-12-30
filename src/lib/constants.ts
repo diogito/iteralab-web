@@ -37,16 +37,17 @@ export const PRICING = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Precios', href: '#precios' },
+  { label: 'Servicios', href: '/#servicios' },
   { label: 'Contacto', href: '#contacto' },
 ] as const;
 
 export const FOOTER_LINKS = {
   servicios: [
-    { label: 'Soluciones Web', href: '#servicios' },
-    { label: 'Consultoría IA', href: '#', badge: 'Coming Soon' },
-    { label: 'Auditoría de Seguridad', href: '#' },
+    { label: 'Integraciones & APIs', href: '/servicios/integraciones' },
+    { label: 'Software a Medida', href: '/servicios/software-a-medida' },
+    { label: 'IA & Automatización', href: '/servicios/ia' },
+    { label: 'Consultoría Técnica', href: '/servicios/consultoria' },
+    { label: 'Modernización Web', href: '/servicios/modernizacion-web' },
   ],
   empresa: [
     { label: 'Sobre Nosotros', href: '#' },

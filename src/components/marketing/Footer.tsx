@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { FOOTER_LINKS } from '@/lib/constants';
-import { Badge } from '@/components/ui/Badge';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,8 +14,8 @@ export function Footer() {
               Iteralab<span className="text-indigo-500">.</span>
             </Link>
             <p className="text-zinc-400 text-sm max-w-xs">
-              Arquitectura digital que vende. Modernización web con estándares
-              de Silicon Valley y soporte local en Chile.
+              Ingeniería de software integral para empresas chilenas.
+              Automatización, integraciones y modernización digital.
             </p>
           </div>
 
@@ -30,14 +29,9 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors inline-flex items-center gap-2"
+                    className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
                   >
                     {link.label}
-                    {'badge' in link && link.badge && (
-                      <Badge variant="outline" className="text-xs py-0.5 px-2">
-                        {link.badge}
-                      </Badge>
-                    )}
                   </Link>
                 </li>
               ))}
