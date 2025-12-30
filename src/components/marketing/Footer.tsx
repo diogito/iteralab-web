@@ -11,11 +11,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="text-2xl">🧪</span>
-              <span className="font-display text-xl font-bold text-zinc-100">
-                Iteralab
-              </span>
+            <Link href="/" className="font-display text-xl font-bold text-white mb-4 inline-block">
+              Iteralab<span className="text-indigo-500">.</span>
             </Link>
             <p className="text-zinc-400 text-sm max-w-xs">
               Arquitectura digital que vende. Modernización web con estándares

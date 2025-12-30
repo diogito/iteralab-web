@@ -28,12 +28,9 @@ export function Navbar() {
       `}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl">🧪</span>
-          <span className="font-display text-xl font-bold text-zinc-100">
-            Iteralab
-          </span>
+        {/* Logo - Tipográfico puro */}
+        <Link href="/" className="font-display text-xl font-bold text-white">
+          Iteralab<span className="text-indigo-500">.</span>
         </Link>
 
         {/* Desktop Navigation */}

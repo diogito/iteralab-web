@@ -28,9 +28,9 @@ export function ComparisonGrid() {
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Freelancers Column */}
+          {/* Freelancers Column - Sutil riesgo */}
           <AnimatedSection delay={0.1}>
-            <Card variant="muted" className="h-full">
+            <Card variant="muted" className="h-full bg-red-500/5 border border-red-500/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center">
                   <X className="w-5 h-5 text-zinc-500" />
@@ -59,9 +59,9 @@ export function ComparisonGrid() {
             </Card>
           </AnimatedSection>
 
-          {/* Iteralab Column */}
+          {/* Iteralab Column - Premium */}
           <AnimatedSection delay={0.2}>
-            <Card variant="highlight" className="h-full relative overflow-hidden">
+            <Card variant="highlight" className="h-full relative overflow-hidden border border-indigo-500/30 shadow-lg shadow-indigo-500/10">
               {/* Glow effect */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl"></div>
 
