@@ -93,7 +93,7 @@ export default function ConsultoriaPage() {
                 transition={transition(0.1)}
                 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
               >
-                Toma decisiones tecnológicas de millón de dólares
+                Toma decisiones tecnológicas críticas
                 <span className="text-indigo-600 dark:text-indigo-400"> con la seguridad de un experto.</span>
               </motion.h1>
 

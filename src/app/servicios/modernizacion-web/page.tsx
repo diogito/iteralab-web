@@ -57,7 +57,7 @@ const benefits = [
   {
     icon: Clock,
     title: 'Velocidad Real',
-    description: 'Google te premia con mejor posicionamiento. Tus usuarios no abandonan por frustración. Carga en menos de 2 segundos.',
+    description: 'Google te premia con mejor posicionamiento. Tus usuarios no abandonan por frustración. Tecnología optimizada para tiempos de respuesta inmediatos.',
   },
 ];
 
@@ -196,7 +196,7 @@ export default function ModernizacionWebPage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
-                      <span><strong className="text-zinc-900 dark:text-zinc-100">Carga en menos de 2 segundos</strong> — Tecnología moderna, hosting optimizado</span>
+                      <span><strong className="text-zinc-900 dark:text-zinc-100">Carga instantánea y fluida</strong> — Tecnología moderna, hosting optimizado</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />

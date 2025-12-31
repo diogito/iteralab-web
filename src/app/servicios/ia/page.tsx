@@ -100,8 +100,8 @@ export default function IAPage() {
                 transition={transition(0.1)}
                 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
               >
-                Tu mejor empleado trabaja 24/7, no se cansa
-                <span className="text-indigo-600 dark:text-indigo-400"> y procesa datos en milisegundos.</span>
+                Potencia tu operación con Agentes Digitales
+                <span className="text-indigo-600 dark:text-indigo-400"> que trabajan 24/7.</span>
               </motion.h1>
 
               <motion.p
@@ -110,8 +110,8 @@ export default function IAPage() {
                 transition={transition(0.2)}
                 className="mt-6 text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto"
               >
-                Deja de desperdiciar talento humano en tareas de robot. Implementamos Agentes de IA
-                que atienden clientes, leen documentos y automatizan flujos complejos sin supervisión.
+                Libera a tu equipo de las tareas repetitivas. Implementamos IA que procesa datos
+                y atiende consultas automáticamente para que tu personal se enfoque en lo estratégico.
               </motion.p>
 
               <motion.div
