@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { Logo } from '@/components/ui/Logo';
 import { NAV_LINKS } from '@/lib/constants';
 
 export function Navbar() {
@@ -44,9 +45,9 @@ export function Navbar() {
         `}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          {/* Logo - Tipográfico puro */}
-          <Link href="/" className="font-display text-xl font-bold text-zinc-900 dark:text-white">
-            Iteralab<span className="text-indigo-500">.</span>
+          {/* Logo */}
+          <Link href="/">
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}
@@ -94,10 +95,10 @@ export function Navbar() {
           {/* Logo in mobile menu */}
           <Link
             href="/"
-            className="font-display text-2xl font-bold text-zinc-900 dark:text-white mb-4"
+            className="mb-4"
             onClick={closeMobileMenu}
           >
-            Iteralab<span className="text-indigo-500">.</span>
+            <Logo className="text-2xl" />
           </Link>
 
           {/* Navigation Links */}

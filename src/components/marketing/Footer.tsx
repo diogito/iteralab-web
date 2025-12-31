@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Logo } from '@/components/ui/Logo';
 import { FOOTER_LINKS } from '@/lib/constants';
 
 export function Footer() {
@@ -10,8 +11,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <Link href="/" className="font-display text-xl font-bold text-zinc-900 dark:text-white mb-4 inline-block">
-              Iteralab<span className="text-indigo-500">.</span>
+            <Link href="/" className="inline-block mb-4">
+              <Logo />
             </Link>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm max-w-xs">
               Ingeniería de software integral para empresas chilenas.
