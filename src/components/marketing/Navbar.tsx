@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { NAV_LINKS, WHATSAPP_LINK } from '@/lib/constants';
+import { NAV_LINKS } from '@/lib/constants';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -59,11 +59,11 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+            <Link href="/agendar">
               <Button size="sm">
                 Contactar
               </Button>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -129,17 +129,15 @@ export function Navbar() {
           ))}
 
           {/* CTA Button */}
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/agendar"
             className="mt-4"
             onClick={closeMobileMenu}
           >
             <Button size="lg">
               Contactar
             </Button>
-          </a>
+          </Link>
         </div>
       )}
     </>

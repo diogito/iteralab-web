@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
-import { WHATSAPP_LINK } from '@/lib/constants';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -87,11 +87,11 @@ export function HeroCorporate() {
                 Explorar Soluciones
               </Button>
             </a>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <Link href="/agendar" className="w-full sm:w-auto">
               <Button variant="secondary" size="lg" className="w-full">
                 Agendar Consultoría
               </Button>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Trust indicators */}

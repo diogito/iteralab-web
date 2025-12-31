@@ -8,7 +8,6 @@ import { Footer } from '@/components/marketing/Footer';
 import { Button } from '@/components/ui/Button';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { WhatsAppFloat } from '@/components/ui/WhatsAppFloat';
-import { WHATSAPP_LINK } from '@/lib/constants';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -90,11 +89,11 @@ export default function IntegracionesPage() {
                 transition={transition(0.3)}
                 className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Link href="/agendar" className="w-full sm:w-auto">
                   <Button size="lg" className="w-full">
                     Solicitar Diagnóstico
                   </Button>
-                </a>
+                </Link>
                 <Link href="/#servicios" className="w-full sm:w-auto">
                   <Button variant="secondary" size="lg" className="w-full">
                     Ver todos los servicios
@@ -209,12 +208,12 @@ export default function IntegracionesPage() {
                 Agenda una consultoría gratuita y te mostraremos cómo conectar tu ecosistema digital.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Link href="/agendar" className="w-full sm:w-auto">
                   <Button size="lg" className="w-full">
                     Agendar Consultoría
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
-                </a>
+                </Link>
               </div>
             </AnimatedSection>
           </div>
