@@ -47,15 +47,15 @@ export function ServicesGrid() {
   return (
     <section id="servicios" className="py-24 relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900/50 to-zinc-950" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-zinc-50/50 to-white dark:from-zinc-950 dark:via-zinc-900/50 dark:to-zinc-950" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Soluciones <span className="text-indigo-400">Integrales</span>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-zinc-900 dark:text-zinc-100">
+              Soluciones <span className="text-indigo-600 dark:text-indigo-400">Integrales</span>
             </h2>
-            <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
+            <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto text-lg">
               Desde la consultoría estratégica hasta la implementación técnica.
               Un solo partner para toda tu transformación digital.
             </p>
@@ -72,8 +72,9 @@ export function ServicesGrid() {
                   transition={{ duration: 0.2 }}
                   className={`
                     relative h-full p-6 lg:p-8 rounded-2xl border transition-all duration-300
-                    bg-zinc-900/50 backdrop-blur-sm
-                    border-zinc-800 hover:border-indigo-500/50
+                    bg-white dark:bg-zinc-900/50 backdrop-blur-sm
+                    border-zinc-200 dark:border-zinc-800 hover:border-indigo-500/50
+                    shadow-lg shadow-zinc-200/50 dark:shadow-none
                     group cursor-pointer
                     ${service.featured ? 'md:col-span-2 lg:col-span-1' : ''}
                   `}
@@ -84,19 +85,19 @@ export function ServicesGrid() {
                   <div className="relative z-10">
                     {/* Icon */}
                     <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-4 group-hover:bg-indigo-500/20 transition-colors">
-                      <service.icon className="w-6 h-6 text-indigo-400" />
+                      <service.icon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                     </div>
 
                     {/* Content */}
-                    <h3 className="font-display text-xl font-semibold text-zinc-100 mb-2 group-hover:text-white transition-colors">
+                    <h3 className="font-display text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-indigo-600 dark:group-hover:text-white transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed mb-4">
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed mb-4">
                       {service.description}
                     </p>
 
                     {/* Arrow */}
-                    <div className="flex items-center text-indigo-400 text-sm font-medium">
+                    <div className="flex items-center text-indigo-600 dark:text-indigo-400 text-sm font-medium">
                       <span>Ver más</span>
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -104,7 +105,7 @@ export function ServicesGrid() {
 
                   {/* Featured badge */}
                   {service.featured && (
-                    <div className="absolute top-4 right-4 bg-indigo-500/20 text-indigo-400 text-xs font-medium px-2 py-1 rounded-full">
+                    <div className="absolute top-4 right-4 bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-medium px-2 py-1 rounded-full">
                       Destacado
                     </div>
                   )}

@@ -24,7 +24,7 @@ export default function AgendarPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-zinc-950 pt-16">
+      <main className="min-h-screen bg-white dark:bg-zinc-950 pt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Header */}
           <div className="text-center mb-12">
@@ -32,7 +32,7 @@ export default function AgendarPage() {
               {...fadeInUp}
               animate={fadeInUp.animate}
               transition={transition(0)}
-              className="inline-flex items-center gap-2 bg-indigo-500/10 text-indigo-400 px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 px-4 py-2 rounded-full mb-6"
             >
               <Calendar className="w-4 h-4" />
               <span className="text-sm font-medium">Consultoría Gratuita</span>
@@ -42,17 +42,17 @@ export default function AgendarPage() {
               {...fadeInUp}
               animate={fadeInUp.animate}
               transition={transition(0.1)}
-              className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4"
+              className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-zinc-900 dark:text-zinc-100"
             >
               Agenda tu Consultoría{' '}
-              <span className="text-indigo-400">Estratégica</span>
+              <span className="text-indigo-600 dark:text-indigo-400">Estratégica</span>
             </motion.h1>
 
             <motion.p
               {...fadeInUp}
               animate={fadeInUp.animate}
               transition={transition(0.2)}
-              className="text-lg text-zinc-400 max-w-2xl mx-auto"
+              className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto"
             >
               30 minutos para analizar tu infraestructura y definir el plan de acción.
             </motion.p>
@@ -63,7 +63,7 @@ export default function AgendarPage() {
             {...fadeInUp}
             animate={fadeInUp.animate}
             transition={transition(0.3)}
-            className="rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden min-h-[700px]"
+            className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 overflow-hidden min-h-[700px] shadow-lg shadow-zinc-200/50 dark:shadow-none"
           >
             <BookingWidget />
           </motion.div>

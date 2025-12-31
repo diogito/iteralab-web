@@ -5,15 +5,15 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-zinc-900 border-t border-zinc-800">
+    <footer className="bg-zinc-100 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <Link href="/" className="font-display text-xl font-bold text-white mb-4 inline-block">
+            <Link href="/" className="font-display text-xl font-bold text-zinc-900 dark:text-white mb-4 inline-block">
               Iteralab<span className="text-indigo-500">.</span>
             </Link>
-            <p className="text-zinc-400 text-sm max-w-xs">
+            <p className="text-zinc-600 dark:text-zinc-400 text-sm max-w-xs">
               Ingeniería de software integral para empresas chilenas.
               Automatización, integraciones y modernización digital.
             </p>
@@ -21,7 +21,7 @@ export function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="font-display font-semibold text-zinc-100 mb-4">
+            <h3 className="font-display font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
               Servicios
             </h3>
             <ul className="space-y-3">
@@ -29,7 +29,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
+                    className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -40,7 +40,7 @@ export function Footer() {
 
           {/* Company Column */}
           <div>
-            <h3 className="font-display font-semibold text-zinc-100 mb-4">
+            <h3 className="font-display font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
               Empresa
             </h3>
             <ul className="space-y-3">
@@ -48,7 +48,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors"
+                    className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -59,7 +59,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-zinc-800">
+        <div className="mt-12 pt-8 border-t border-zinc-200 dark:border-zinc-800">
           <p className="text-center text-zinc-500 text-sm">
             © {currentYear} Iteralab SpA - Santiago, Chile. Todos los derechos reservados.
           </p>

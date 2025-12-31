@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(git -C \"d:\\\\workspaces\\\\iteralab\\\\web\" log --oneline -20)",
+      "Bash(cat:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: restructure to multi-service corporate site\n\nBREAKING: Transform from single landing to full consulting site\n\n- Add HeroCorporate component with corporate messaging\n- Add ServicesGrid with Bento layout \\(5 service cards\\)\n- Move web offering to /servicios/modernizacion-web\n- Create placeholder pages for 4 new services:\n  - /servicios/integraciones\n  - /servicios/software-a-medida\n  - /servicios/ia\n  - /servicios/consultoria\n- Update navigation and footer links\n- Add page-level metadata for SEO\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git -C \"d:\\\\workspaces\\\\iteralab\\\\web\" status)",
+      "Bash(git -C \"d:\\\\workspaces\\\\iteralab\\\\web\" diff --stat)",
+      "Bash(git -C \"d:\\\\workspaces\\\\iteralab\\\\web\" add src/app/servicios/)",
+      "Bash(git -C \"d:\\\\workspaces\\\\iteralab\\\\web\" commit -m \"$\\(cat <<''EOF''\nfeat\\(servicios\\): add full content to all service pages\n\n- Integraciones: APIs, ERPs, CRMs integration with real-time sync\n- Software a Medida: Custom development with ownership benefits\n- IA & Automatización: RAG chatbots, document processing, 24/7 agents\n- Consultoría: CTO on-demand, code audits, cloud cost optimization\n\nEach page includes:\n- Animated Hero with Framer Motion \\(consistent fadeInUp pattern\\)\n- Problem vs Solution comparison section\n- Benefits grid with 3 service-specific cards\n- CTA section with WhatsApp integration\n- SEO metadata via separate layout.tsx files\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C \"d:\\\\workspaces\\\\iteralab\\\\web\" push)",
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(git -C \"d:\\\\workspaces\\\\iteralab\\\\web\" log --oneline -3)",
+      "Bash(ls:*)"
+    ]
+  }
+}
