@@ -37,7 +37,7 @@ export function HeroCorporate() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pb-32 md:pb-20">
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
           <motion.div
@@ -99,7 +99,7 @@ export function HeroCorporate() {
             {...fadeInUp}
             animate={fadeInUp.animate}
             transition={transition(0.4)}
-            className="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm text-zinc-500"
+            className="mt-16 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm text-zinc-500"
           >
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
