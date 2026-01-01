@@ -218,10 +218,10 @@ export default function ModernizacionWebPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <div className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-indigo-500/10 via-white to-white dark:from-indigo-500/20 dark:via-zinc-900 dark:to-zinc-900 border-2 border-indigo-500/30 shadow-xl shadow-indigo-500/10">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="inline-flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    <Eye className="w-4 h-4" />
-                    Sin Riesgo: Ves el resultado antes de pagar
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 max-w-[calc(100%-2rem)] w-full sm:w-auto">
+                  <div className="flex items-center justify-center gap-2 bg-indigo-600 text-white px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold shadow-lg mx-auto w-fit">
+                    <Eye className="w-4 h-4 shrink-0" />
+                    <span className="text-center">Sin Riesgo: Ves el resultado antes de pagar</span>
                   </div>
                 </div>
 
