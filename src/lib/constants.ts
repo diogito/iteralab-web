@@ -43,9 +43,9 @@ export const NAV_LINKS = [
 
 export const FOOTER_LINKS = {
   servicios: [
-    { label: 'Integraciones & APIs', href: '/servicios/integraciones' },
+    { label: 'Integraciones y APIs', href: '/servicios/integraciones' },
     { label: 'Software a Medida', href: '/servicios/software-a-medida' },
-    { label: 'IA & Automatización', href: '/servicios/ia' },
+    { label: 'IA y Automatización', href: '/servicios/ia' },
     { label: 'Consultoría Técnica', href: '/servicios/consultoria' },
     { label: 'Modernización Web', href: '/servicios/modernizacion-web' },
   ],

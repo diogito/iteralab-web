@@ -7,7 +7,7 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
 const services = [
   {
-    title: 'Integraciones & APIs',
+    title: 'Integraciones y APIs',
     description: 'Conectamos tu ERP, CRM y flujos de datos.',
     href: '/servicios/integraciones',
     icon: Plug,
@@ -21,7 +21,7 @@ const services = [
     featured: false,
   },
   {
-    title: 'IA & Automatización',
+    title: 'IA y Automatización',
     description: 'Chatbots RAG y optimización de procesos.',
     href: '/servicios/ia',
     icon: Bot,
