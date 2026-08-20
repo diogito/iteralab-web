@@ -19,8 +19,10 @@ import { Footer } from '@/components/marketing/Footer';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { Button } from '@/components/ui/Button';
 import { WhatsAppFloat } from '@/components/ui/WhatsAppFloat';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { AGENTS, ACCENT_STYLES, type AgentIconKey } from '@/lib/agents';
 import { WHATSAPP_LINK } from '@/lib/constants';
+import { agentServiceSchema, faqSchema, breadcrumbSchema } from '@/lib/seo';
 import { cn } from '@/lib/utils';
 
 const ICONS: Record<AgentIconKey, LucideIcon> = {
@@ -48,10 +50,14 @@ export async function generateMetadata({
   return {
     title: `${agent.name} — ${agent.role}`,
     description: agent.pitch,
+    alternates: {
+      canonical: `/agentes/${agent.slug}`,
+    },
     openGraph: {
       title: `${agent.name} — ${agent.role} | Iteralab`,
       description: agent.tagline,
       url: `https://iteralab.cl/agentes/${agent.slug}`,
+      type: 'website',
     },
   };
 }
@@ -69,6 +75,15 @@ export default async function AgentDetailPage({ params }: AgentPageProps) {
     <>
       <Navbar />
       <main>
+        <JsonLd data={agentServiceSchema(agent)} />
+        <JsonLd data={faqSchema(agent.faq)} />
+        <JsonLd
+          data={breadcrumbSchema([
+            { name: 'Inicio', path: '/' },
+            { name: 'Agentes', path: '/agentes' },
+            { name: agent.name, path: `/agentes/${agent.slug}` },
+          ])}
+        />
         {/* Hero */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-white via-zinc-50 to-white dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950" />

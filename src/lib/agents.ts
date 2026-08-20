@@ -20,6 +20,11 @@ export interface AgentIdealFor {
   example: string;
 }
 
+export interface AgentFaq {
+  question: string;
+  answer: string;
+}
+
 export interface Agent {
   slug: string;
   name: string;
@@ -32,6 +37,7 @@ export interface Agent {
   integrations: string[];
   idealFor: AgentIdealFor[];
   deliverables: string[];
+  faq: AgentFaq[];
   accent: AgentAccent;
 }
 
@@ -117,6 +123,23 @@ export const AGENTS: Agent[] = [
       'Traspaso a humano definido',
       'Bitácora y métricas comerciales',
     ],
+    faq: [
+      {
+        question: '¿Qué hace Vera?',
+        answer:
+          'Vera es el agente comercial de Iteralab: responde consultas por WhatsApp y web 24/7, califica prospectos con los criterios de tu negocio y agenda reuniones directo en tu calendario o CRM.',
+      },
+      {
+        question: '¿Cómo atiende Vera fuera del horario laboral?',
+        answer:
+          'Vera opera 24/7 en WhatsApp Business y en tu web: responde al instante, retoma conversaciones que quedaron sin respuesta y deja cada mañana un resumen de leads, citas y oportunidades.',
+      },
+      {
+        question: '¿Con qué sistemas se integra Vera?',
+        answer:
+          'WhatsApp Business API, CRMs como HubSpot o Salesforce (o planillas), Google Calendar, Outlook y APIs internas.',
+      },
+    ],
     accent: 'violet',
   },
   {
@@ -192,6 +215,23 @@ export const AGENTS: Agent[] = [
       'Reportes automáticos (turno/diario/semanal)',
       'Tablero de alertas',
       'Capacitación del equipo en terreno',
+    ],
+    faq: [
+      {
+        question: '¿Qué hace Atlas?',
+        answer:
+          'Atlas es el agente de operaciones de Iteralab: coordina turnos, cuadrillas, terrenos y bodegas, consolida la información de terreno y genera los reportes de turno sin intervención.',
+      },
+      {
+        question: '¿Cómo maneja Atlas los imprevistos en terreno?',
+        answer:
+          'Detecta retrasos, incidentes y quiebres de stock, notifica a tiempo al responsable y escala lo crítico según las reglas de escalamiento definidas para tu operación.',
+      },
+      {
+        question: '¿Qué reportes genera Atlas?',
+        answer:
+          'Parte diario, reportes de turno y semanales, KPIs de operación y un historial operativo consultable desde el chat, todo sin intervención manual.',
+      },
     ],
     accent: 'indigo',
   },
@@ -274,6 +314,23 @@ export const AGENTS: Agent[] = [
       'Bitácora auditable por documento',
       'Métricas de precisión y ciclo',
     ],
+    faq: [
+      {
+        question: '¿Qué hace Lector?',
+        answer:
+          'Lector es el agente documental de Iteralab: extrae datos de guías de despacho, facturas, contratos y manifiestos con OCR y modelos de lenguaje, los valida contra tus reglas y los inyecta en tu ERP sin digitación manual.',
+      },
+      {
+        question: '¿Cómo asegura Lector que los datos extraídos sean correctos?',
+        answer:
+          'Valida montos, RUT y folios contra las reglas de negocio de tu empresa y entrega un nivel de confianza por campo. Lo dudoso va a revisión humana, nunca directo al sistema.',
+      },
+      {
+        question: '¿De qué medios recibe documentos Lector?',
+        answer:
+          'Correo, WhatsApp, carpetas compartidas, S3 y gestores documentales. Cada documento procesado queda con una bitácora auditable.',
+      },
+    ],
     accent: 'cyan',
   },
   {
@@ -347,6 +404,23 @@ export const AGENTS: Agent[] = [
       'Perfiles de acceso definidos',
       'Panel de brechas de conocimiento',
       'Métricas de uso y satisfacción',
+    ],
+    faq: [
+      {
+        question: '¿Qué hace Oráculo?',
+        answer:
+          'Oráculo es el agente de conocimiento de Iteralab: convierte tus manuales, procedimientos, políticas y catálogos en un chat privado que responde con la fuente citada, para onboarding, soporte interno y cumplimiento.',
+      },
+      {
+        question: '¿Cómo evita Oráculo inventar respuestas?',
+        answer:
+          'Usa RAG privado sobre tu base de conocimiento y cada respuesta cita el documento original de donde salió. Si no encuentra la respuesta, escala en lugar de improvisar.',
+      },
+      {
+        question: '¿En qué canales puede operar Oráculo?',
+        answer:
+          'Web, WhatsApp o chat interno (Slack, Teams), con permisos por perfil para que cada equipo vea solo lo que le corresponde.',
+      },
     ],
     accent: 'emerald',
   },

@@ -313,28 +313,37 @@ Formatea números al formato de moneda chilena (peso chileno) sin decimales.
 
 ## SEO y Metadatos
 
+> Detalle completo de la optimización AEO en [`AEO-OPTIMIZATION.md`](./AEO-OPTIMIZATION.md).
+
 ### Configuración Global
-- **Título base**: Iteralab | Ingeniería de Software para Empresas
-- **Descripción**: Deuda técnica cero. Modernizamos tu infraestructura web con estándares de Silicon Valley y soporte local en Chile.
+- **Título base**: Iteralab | Desarrollo de Agentes de IA para Empresas
+- **Descripción**: Desarrollo de agentes de IA para empresas chilenas, conectados a ERP, WhatsApp y operación real.
 - **Idioma**: Español (es)
 - **Locale**: es_CL
+- **Canonical** declarado en todas las rutas (`alternates.canonical`)
 
 ### Open Graph
-- Título, descripción y URL configurados para compartir en redes sociales
-- Imagen OG generada dinámicamente vía opengraph-image.tsx
+- Título, descripción, URL y `locale: es_CL` configurados para compartir en redes
+- Imagen OG generada dinámicamente vía `opengraph-image.tsx` (1200x630)
 
 ### Twitter Cards
-- Tipo: summary_large_image
-- Título y descripción personalizados
+- Tipo: `summary_large_image`
+- Título y descripción personalizados por página
 
-### Robots
-- Indexación permitida (index: true)
-- Seguimiento de enlaces permitido (follow: true)
+### Robots y Sitemap
+- `robots.ts`: indexación permitida y referencia al sitemap
+- `sitemap.ts`: sitemap estático que cubre home, agentes, servicios y agendar
 
 ### Datos Estructurados (JSON-LD)
-- Tipo: ProfessionalService
-- Información de la empresa incluyendo país y región
-- Rango de precios: $$
+Generados desde builders tipados en `src/lib/seo.ts` e inyectados con `src/components/seo/JsonLd.tsx`.
+- Global: `Organization`, `WebSite`, `ProfessionalService` (con `@id` compartido)
+- Home: `ItemList` (agentes) + `FAQPage` con `speakable`
+- Agentes: `Service` por agente + `FAQPage` por agente + `BreadcrumbList`
+- Servicios: `Service` por servicio + `BreadcrumbList`
+
+### Archivos para crawlers IA (AEO)
+- `/llms.txt` y `/llms-full.txt` generados desde `src/lib/llms.ts`
+  (resumen y detalle completo en markdown plano para Perplexity, ChatGPT, Gemini, etc.)
 
 ---
 

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import {
   ArrowRight,
   CircleCheck,
@@ -14,7 +15,9 @@ import { EngagementStrip } from '@/components/marketing/EngagementStrip';
 import { Footer } from '@/components/marketing/Footer';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { WhatsAppFloat } from '@/components/ui/WhatsAppFloat';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { AGENTS, ACCENT_STYLES, type AgentIconKey } from '@/lib/agents';
+import { itemListSchema } from '@/lib/seo';
 import { cn } from '@/lib/utils';
 
 const ICONS: Record<AgentIconKey, LucideIcon> = {
@@ -24,11 +27,35 @@ const ICONS: Record<AgentIconKey, LucideIcon> = {
   brain: BrainCircuit,
 };
 
+export const metadata: Metadata = {
+  title: 'Agentes de IA | Iteralab',
+  description:
+    'Los cuatro agentes de IA de Iteralab: Vera (comercial), Atlas (operaciones), Lector (documental) y Oráculo (conocimiento). Elige por dónde empezar o combina agentes.',
+  alternates: {
+    canonical: '/agentes',
+  },
+  openGraph: {
+    title: 'Agentes de IA | Iteralab',
+    description:
+      'Vera, Atlas, Lector y Oráculo: cuatro agentes de IA de producción para tu empresa.',
+    url: 'https://iteralab.cl/agentes',
+  },
+};
+
 export default function AgentesIndexPage() {
   return (
     <>
       <Navbar />
       <main>
+        <JsonLd
+          data={itemListSchema(
+            AGENTS.map((agent) => ({
+              name: `${agent.name} — ${agent.role}`,
+              description: agent.tagline,
+              path: `/agentes/${agent.slug}`,
+            }))
+          )}
+        />
         {/* Hero */}
         <section className="relative pt-32 pb-16 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-white via-zinc-50 to-white dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950" />
