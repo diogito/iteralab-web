@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Consultoría en IA y Automatización | Iteralab',
-  description: 'Implementación de Chatbots RAG y Agentes IA.',
+  title: 'Agentes de IA para Empresas | Iteralab',
+  description:
+    'Desarrollo de agentes de IA para empresas: atención de clientes, procesamiento de documentos y coordinación de operaciones en minería, agricultura, logística y back-office.',
   openGraph: {
-    title: 'Consultoría en IA y Automatización | Iteralab',
-    description: 'Implementación de Chatbots RAG y Agentes IA. Automatiza soporte, ventas y procesamiento de documentos.',
+    title: 'Agentes de IA para Empresas | Iteralab',
+    description:
+      'Agentes de IA que atienden, procesan documentos y coordinan tu operación 24/7. Para minería, agricultura, logística y back-office.',
     url: 'https://iteralab.cl/servicios/ia',
   },
 };

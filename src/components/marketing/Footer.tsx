@@ -8,16 +8,36 @@ export function Footer() {
   return (
     <footer className="bg-zinc-100 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Column */}
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <Logo />
             </Link>
             <p className="text-zinc-600 dark:text-zinc-400 text-sm max-w-xs">
-              Ingeniería de software integral para empresas chilenas.
-              Automatización, integraciones y modernización digital.
+              Desarrollamos agentes de IA que automatizan procesos reales:
+              atención de clientes, documentos y coordinación de operaciones.
             </p>
+            <p className="text-zinc-500 text-sm mt-3">Santiago, Chile</p>
+          </div>
+
+          {/* Agents Column */}
+          <div>
+            <h3 className="font-display font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+              Agentes
+            </h3>
+            <ul className="space-y-3">
+              {FOOTER_LINKS.agentes.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Services Column */}
@@ -27,6 +47,25 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.servicios.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries Column */}
+          <div>
+            <h3 className="font-display font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+              Industrias
+            </h3>
+            <ul className="space-y-3">
+              {FOOTER_LINKS.industrias.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
